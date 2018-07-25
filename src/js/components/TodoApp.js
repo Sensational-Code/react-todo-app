@@ -8,30 +8,30 @@ import style from '../../css/style.css';
 /*
 App Structure
 	TodoApp
-  	- Header
-      - Form
-  	- TaskList
-      - TaskItem #1
-      - TaskItem #2
-      ...
+		- Header
+			- Form
+		- TaskList
+			- TaskItem #1
+			- TaskItem #2
+			...
 */
 
 export default class TodoApp extends React.Component {
 	constructor(props) {
-	 super(props);
-    let exampleTasks = [
-      {title: 'Walk the dog', done: false},
-      {title: 'Organize desk', done: false},
-      {title: 'Go for a jog', done: false},
-      {title: 'Make a git commit', done: false}
-    ];
+		super(props);
+		let exampleTasks = [
+			{title: 'Walk the dog', done: false},
+			{title: 'Organize desk', done: false},
+			{title: 'Go for a jog', done: false},
+			{title: 'Make a git commit', done: false}
+		];
 
 		this.state = {
-      tasks: exampleTasks.slice(0)
+			tasks: exampleTasks.slice(0)
 		};
 
 		this.addTask = this.addTask.bind(this);
-    this.updateTask = this.updateTask.bind(this);
+		this.updateTask = this.updateTask.bind(this);
 		this.removeTask = this.removeTask.bind(this);
 	}
 
@@ -42,11 +42,11 @@ export default class TodoApp extends React.Component {
 		});
 	}
 
-  updateTask(index, task) {
-    let {tasks} = this.state;
-    tasks[index].done = task.done;
-    this.setState({tasks});
-  }
+	updateTask(index, task) {
+		let {tasks} = this.state;
+		tasks[index].done = task.done;
+		this.setState({tasks});
+	}
 
 	removeTask(index) {
 		let {tasks} = this.state;

@@ -24,6 +24,6 @@ export default class TaskItem extends React.Component {
 				<span>{this.props.task.title}</span>
 				<span className={style.close} onClick={this.handleClose}>×</span>
 			</li>
-	);
+		);
 	}
 }

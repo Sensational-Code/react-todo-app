@@ -9,12 +9,14 @@ export default class TaskList extends React.Component {
 	}
 
 	render() {
-		return (<ul>
-			{this.props.tasks.map(
-				(task, index) => {
-					return <TaskItem key={index} index={index} task={task} updateTask={this.props.updateTask} removeTask={this.props.removeTask}></TaskItem>
-				}
-			)}
-		</ul>)
+		return (
+			<ul>
+				{this.props.tasks.map(
+					(task, index) => {
+						return <TaskItem key={index} index={index} task={task} updateTask={this.props.updateTask} removeTask={this.props.removeTask}></TaskItem>
+					}
+				)}
+			</ul>
+		);
 	}
 }
