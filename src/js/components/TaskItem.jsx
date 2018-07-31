@@ -9,19 +9,22 @@ export default class TaskItem extends React.Component {
 	}
 
 	handleClick() {
-		this.props.task.done = !this.props.task.done;
-		this.props.updateTask(this.props.index, this.props.task);
+		const { task, index: taskIndex, updateTask } = this.props;
+		task.done = !task.done;
+		updateTask(taskIndex, task);
 	}
 
 	handleClose(event) {
-		this.props.removeTask(this.props.index);
+		const { index: taskIndex, removeTask } = this.props;
+		removeTask(taskIndex);
 		event.stopPropagation();
 	}
 
 	render() {
+		const { task } = this.props;
 		return (
-			<li className={(this.props.task.done ? style.checked : '')} onClick={this.handleClick}>
-				<span>{this.props.task.title}</span>
+			<li className={(task.done ? style.checked : '')} onClick={this.handleClick}>
+				<span>{task.title}</span>
 				<span className={style.close} onClick={this.handleClose}>×</span>
 			</li>
 		);

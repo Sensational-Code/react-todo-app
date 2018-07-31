@@ -24,7 +24,7 @@ module.exports = {
 	context: path.join(__dirname, 'src'),
 	devtool: dev ? 'none' : 'source-map',
 	entry: {
-		app: './js/App.js',
+		app: './js/App.jsx',
 		lib: [
 			'react', 
 			'react-dom'
@@ -32,10 +32,7 @@ module.exports = {
 	},
 
 	resolve: {
-		modules: [
-			path.resolve('./src'),
-			'node_modules',
-		]
+		extensions: ['.js', '.jsx', '.es6']
 	},
 
 	module: {

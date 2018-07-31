@@ -1,7 +1,16 @@
 {
-	"extends": "fortech-react",
+	"extends": "airbnb",
 		"env": {
 			"browser": true,
 			"jest": true
+		},
+		"rules": {
+			"indent": [2, "tab", { "SwitchCase": 1, "VariableDeclarator": 1 }],
+			"no-tabs": 0,
+			"max-len": 0,
+			"react/prop-types": 0,
+			"react/jsx-indent": [2, "tab"],
+			"react/jsx-indent-props": [2, "tab"],
+			"react/jsx-one-expression-per-line": 0,
 		}
 }
