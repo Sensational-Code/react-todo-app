@@ -67,7 +67,7 @@
       "^.+\\.jsx$": "babel-jest",
       "^.+\\.js$": "babel-jest"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/test-config/test-setup.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup.js"
   },
   "author": "Sensational-Code",
   "license": ""
