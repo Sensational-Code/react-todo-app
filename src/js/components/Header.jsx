@@ -41,12 +41,18 @@ export default class Header extends React.Component {
 
 	render() {
 		const { placeholder, inputValue } = this.state;
+		const { tasksCompleted, tasksTotal } = this.props;
+
 		return (
 			<div className={style.header}>
-				<h1>React Todo List</h1>
-				<form onSubmit={this.handleSubmit}>
+				<h4>
+					Today's Tasks
+					<span className={style['count-badge']}>{tasksTotal - tasksCompleted}</span>
+				</h4>
+				<p className={style['tasks-completed']}>{tasksCompleted} of {tasksTotal} tasks completed</p>
+				<form onSubmit={this.handleSubmit} className={style['form-container']}>
 					<input placeholder={placeholder} value={inputValue} onInput={this.setInputValue} />
-					<button type="submit" className={style.addBtn}>Add</button>
+					<button type="submit" className={style['add-button']}>+</button>
 				</form>
 			</div>
 		);

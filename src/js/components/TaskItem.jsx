@@ -24,8 +24,8 @@ export default class TaskItem extends React.Component {
 		const { task } = this.props;
 		return (
 			<li className={(task.done ? style.checked : '')} onClick={this.handleClick}>
-				<span>{task.title}</span>
-				<span className={style.close} onClick={this.handleClose}>×</span>
+				<span className={style['task-title']}>{task.title}</span>
+				<button className={style['close-button']} onClick={this.handleClose}>×</button>
 			</li>
 		);
 	}

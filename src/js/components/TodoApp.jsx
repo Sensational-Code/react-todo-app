@@ -55,9 +55,16 @@ export default class TodoApp extends React.Component {
 
 	render() {
 		const { tasks } = this.state;
+		const tasksCompleted = tasks.reduce((total, todo) => {
+			if (todo.done) {
+				total += 1;
+			}
+			return total;
+		}, 0);
+
 		return (
-			<div className={style.container}>
-				<Header addTask={this.addTask} />
+			<div className={style['todo-container']}>
+				<Header addTask={this.addTask} tasksCompleted={tasksCompleted} tasksTotal={tasks.length} />
 				<List tasks={tasks} updateTask={this.updateTask} removeTask={this.removeTask} />
 			</div>
 		);

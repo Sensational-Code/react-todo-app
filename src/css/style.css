@@ -1,151 +1,134 @@
 body {
 	margin: 0;
-	background-color: #f0efea;
-	font-family: Veranda, sans-serif;
+	background-color: rgb(249, 251, 253);
+	font-family: "Montserrat", sans-serif;
 }
 
-/* Include the padding and border in an element's total width and height */
-* {
-	box-sizing: border-box;
-}
-
-/* Style the todo app container */
-.container {
-	margin: auto;
-	width: 50%;
-	min-width: 340px;
-	margin-top: 100px;
-	background-color: #FFFFFF;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-/* Style the h1 header title */
-h1 {
-	font-weight: bold;
-	font-size: 30px;
-}
-
-/* Remove margins and padding from the list */
-ul {
+input {
 	margin: 0;
-	padding: 0;
+	padding: .6rem .75rem;
+	border: 1px solid rgb(193,204,211);
+	border-radius: .3rem;
+	font-size: 0.9rem;
+	color: rgb(73,80,87);
+	width: 90%;
+	flex-grow: 100;
 }
 
-/* Style the list items */
-ul li {
-	width: 100%;
-	cursor: pointer;
-	position: relative;
-	padding: 12px 8px 12px 40px;
-	list-style-type: none;
-	/*background: #eee;*/
-	font-size: 16px;
-	transition: 0.2s;
-	
-	/* make the list items unselectable */
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+input:focus {
+	outline: none;
 	border: none;
-	display: inline-block;
+	border-radius: .3rem;
+	border: 1px solid rgb(84, 127, 255);
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-	background: #f9f9f9;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-	background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-	background: #888;
-	color: #fff;
-	text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-	content: '';
-	position: absolute;
-	border-color: #fff;
-	border-style: solid;
-	border-width: 0 2px 2px 0;
-	top: 10px;
-	left: 18px;
-	transform: rotate(45deg);
-	height: 15px;
-	width: 7px;
-}
-
-/* Style the close button */
-.close {
-	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 12px 16px 12px 16px;
-	/*border-radius: 50%;*/
-}
-
-.close:hover {
-	background-color: #f44336;
+button {
+	box-shadow: none;
+	font-size: 1.6rem;
+	background: none;
+	border-radius: .3rem;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	min-width: 2.5rem;
 	color: white;
 }
 
-/* Style the header */
-.header {
-	padding: 10px 40px 20px;
-	color: rgb(98, 101, 114);
-	/*text-align: center;*/
-}
-
-/* Style the input */
-input {
-	margin: 0;
-	border: none;
-	border-radius: 0;
-	width: 75%;
-	padding: 9px;
-	font-size: 16px;
-	border: 1px solid darkgray;
-	
-}
-
-/* Remove default styling */
-input:focus {
-	-webkit-box-shadow: none;
+button:hover {
 	box-shadow: none;
-}
-
-/* Style the "Add" button */
-.addBtn {
-	background: none;
-	font-size: 1em;
-	color: blue;
-
-	padding: 9px;
-	width: 25%;
-	background: #cae7e7;
-	color: #555;
-	float: right;
-	text-align: center;
-	font-size: 16px;
-	cursor: pointer;
-	transition: 0.3s;
-
-	border: 1px solid darkgray;
-	border-left: none;
-}
-
-.addBtn:hover {
-	background-color: #bbb;
-}
-
-/* Remove default styling */
-.addBtn:focus, .addBtn:active {
+	border: none;
 	outline: none;
+	background-color: rgb(24, 79, 197);
+}
+
+button:active {
+	background-color: rgb(0, 56, 169);
+}
+
+ul {
+	margin: 0;
+	margin-top: 1.4rem;
+	padding: 0;
+}
+
+ul li {
+	width: 100%;
+	height: 40px;
+	cursor: pointer;
+	list-style-type: none;
+	font-size: 0.9rem;
+	border-radius: 0.3rem;
+}
+
+ul li:hover {
+	background: rgb(241,241,241);
+}
+
+ul li.checked {
+	text-decoration: line-through;
+}
+
+h4 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.todo-container {
+	margin: auto;
+	max-width: 768px;
+	margin-top: 100px;
+	background-color: rgb(255, 255, 255);
+	border-radius: .35rem;
+	box-shadow: 0 23px 20px -20px rgba(115,162,208,0.1), 0 0 15px rgba(115,162,208,0.06);
+	padding: 20px;
+}
+
+.count-badge {
+	border-radius: 10rem;
+	background-color: rgb(58,191,148);
+	float: right;
+	font-size: 13px;
+	line-height: 14px;
+	padding: 5px 10px;
+	color: white;
+}
+
+.tasks-completed {
+	color: rgb(84, 127, 255);
+	margin-top: 0.5rem;
+	font-size: 0.85rem;
+}
+
+.form-container {
+	display: flex;
+}
+
+.add-button {
+	background-color: rgb(84, 127, 255);
+}
+
+.task-title {
+	font-size: 0.9rem;
+	margin: 0;
+	margin: auto;
+	line-height: 40px;
+	margin-left: 0.5rem;
+}
+
+.close-button {
+	display: inline-block;
+	float: right;
+	color: black;
+	height: 100%;
+	font-size: 1.3rem;
+}
+
+.close-button:hover {
+	background-color: rgb(244, 67, 54);
+	color: white;
+}
+
+.close-button:active {
+	background-color: rgb(238, 28, 13);
+	color: white;
 }
