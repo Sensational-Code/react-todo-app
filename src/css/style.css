@@ -1,44 +1,45 @@
+
 body {
+	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	background-color: rgb(249, 251, 253);
-	font-family: "Montserrat", sans-serif;
 }
 
 input {
-	margin: 0;
-	padding: .6rem .75rem;
-	border: 1px solid rgb(193,204,211);
-	border-radius: .3rem;
 	font-size: 0.9rem;
-	color: rgb(73,80,87);
 	width: 90%;
+	margin: 0;
+	padding: 0.6rem 0.75rem;
+	color: rgb(73, 80, 87);
+	border: 1px solid rgb(193, 204, 211);
+	border-radius: 0.3rem;
 	flex-grow: 100;
 }
 
 input:focus {
-	outline: none;
 	border: none;
-	border-radius: .3rem;
 	border: 1px solid rgb(84, 127, 255);
+	border-radius: 0.3rem;
+	outline: none;
 }
 
 button {
-	box-shadow: none;
 	font-size: 1.6rem;
-	background: none;
-	border-radius: .3rem;
-	border: none;
-	outline: none;
-	background-color: transparent;
 	min-width: 2.5rem;
 	color: white;
+	border: none;
+	border-radius: 0.3rem;
+	outline: none;
+	background: none;
+	background-color: transparent;
+	box-shadow: none;
 }
 
 button:hover {
-	box-shadow: none;
 	border: none;
 	outline: none;
 	background-color: rgb(24, 79, 197);
+	box-shadow: none;
 }
 
 button:active {
@@ -52,16 +53,16 @@ ul {
 }
 
 ul li {
+	font-size: 0.9rem;
 	width: 100%;
 	height: 40px;
-	cursor: pointer;
 	list-style-type: none;
-	font-size: 0.9rem;
+	cursor: pointer;
 	border-radius: 0.3rem;
 }
 
 ul li:hover {
-	background: rgb(241,241,241);
+	background: rgb(241, 241, 241);
 }
 
 ul li.checked {
@@ -74,29 +75,29 @@ h4 {
 }
 
 .todo-container {
-	margin: auto;
 	max-width: 768px;
+	margin: auto;
 	margin-top: 100px;
-	background-color: rgb(255, 255, 255);
-	border-radius: .35rem;
-	box-shadow: 0 23px 20px -20px rgba(115,162,208,0.1), 0 0 15px rgba(115,162,208,0.06);
 	padding: 20px;
+	border-radius: 0.35rem;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 23px 20px -20px rgba(115,162,208,0.1), 0 0 15px rgba(115,162,208,0.06);
 }
 
 .count-badge {
-	border-radius: 10rem;
-	background-color: rgb(58,191,148);
-	float: right;
 	font-size: 13px;
 	line-height: 14px;
+	float: right;
 	padding: 5px 10px;
 	color: white;
+	border-radius: 10rem;
+	background-color: rgb(58, 191, 148);
 }
 
 .tasks-completed {
-	color: rgb(84, 127, 255);
-	margin-top: 0.5rem;
 	font-size: 0.85rem;
+	margin-top: 0.5rem;
+	color: rgb(84, 127, 255);
 }
 
 .form-container {
@@ -109,26 +110,26 @@ h4 {
 
 .task-title {
 	font-size: 0.9rem;
+	line-height: 40px;
 	margin: 0;
 	margin: auto;
-	line-height: 40px;
 	margin-left: 0.5rem;
 }
 
 .close-button {
+	font-size: 1.3rem;
 	display: inline-block;
 	float: right;
-	color: black;
 	height: 100%;
-	font-size: 1.3rem;
+	color: black;
 }
 
 .close-button:hover {
-	background-color: rgb(244, 67, 54);
 	color: white;
+	background-color: rgb(244, 67, 54);
 }
 
 .close-button:active {
-	background-color: rgb(238, 28, 13);
 	color: white;
+	background-color: rgb(238, 28, 13);
 }
